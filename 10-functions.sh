@@ -4,7 +4,7 @@ ID=$(id -u)
 
 VALIDATE(){
 
-    if[ $1 -ne 0 ]
+    if [ $1 -ne 0 ]
     then
     echo "$2....failed"
     exit 1
@@ -13,7 +13,7 @@ VALIDATE(){
     fi
 }
 
-if[ $ID -ne 0 ]
+if [ $ID -ne 0 ]
 then
 echo "error:please run with root access"
 exit1
