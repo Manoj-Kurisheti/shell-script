@@ -10,13 +10,13 @@ N="\e[0m"
 
 logfile="/tmp/$0-$Timestamp.log"
 
-echo "script started executing at $Timestamp &>>$logfile
+echo "script started executing at $Timestamp" &>>$logfile
 
 VALIDATE() {
-    if[ $1 -ne 0 ]
+    if [ $1 -ne 0 ]
     then
     echo -e "Error:$2...$R Failed $N"
-    exit1
+    exit 1
     else
     echo -e "$2....$G success $N"
     fi
